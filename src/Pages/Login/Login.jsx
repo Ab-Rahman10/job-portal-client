@@ -2,9 +2,12 @@ import Lottie from "lottie-react";
 import loginLottieData from "../../assets/login.json";
 import { useContext } from "react";
 import AuthContext from "../../Context/AuthContext/AuthContext";
+import SocialAuth from "../Shared/SocialAuth";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const { signInUser } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleSignIn = (e) => {
     e.preventDefault();
@@ -16,6 +19,7 @@ const Login = () => {
     signInUser(email, password)
       .then((result) => {
         console.log(result.user);
+        navigate("/");
       })
       .catch((error) => {
         console.log(error);
@@ -61,8 +65,11 @@ const Login = () => {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-primary">Login</button>
+                <button type="submit" className="btn btn-primary">
+                  Login
+                </button>
               </div>
+              <SocialAuth></SocialAuth>
             </form>
           </div>
         </div>

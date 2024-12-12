@@ -4,15 +4,15 @@ const Footer = () => {
   return (
     <footer className="bg-transparent text-gray-300 py-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
           {/* Logo and Description */}
           <div>
-            <img src={logo} alt="" />
-            <p className="text-sm text-gray-400 mt-4">
+            <img src={logo} alt="Logo" className="mx-auto md:mx-0" />
+            <p className="text-sm text-gray-400 mt-4 text-center md:text-left">
               JobBox is the heart of the design community and the best resource
               to discover and connect with designers and jobs worldwide.
             </p>
-            <div className="flex space-x-4 mt-4">
+            <div className="flex justify-center md:justify-start space-x-4 mt-4">
               <a href="#" className="text-gray-400 hover:text-blue-400">
                 <i className="fab fa-facebook-f"></i>
               </a>
@@ -27,8 +27,10 @@ const Footer = () => {
 
           {/* Resources */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Resources</h3>
-            <ul className="space-y-2">
+            <h3 className="text-lg font-semibold text-white mb-4 text-center md:text-left">
+              Resources
+            </h3>
+            <ul className="space-y-2 text-center md:text-left">
               <li>
                 <a href="#" className="hover:underline hover:text-blue-400">
                   About us
@@ -54,8 +56,10 @@ const Footer = () => {
 
           {/* Community */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Community</h3>
-            <ul className="space-y-2">
+            <h3 className="text-lg font-semibold text-white mb-4 text-center md:text-left">
+              Community
+            </h3>
+            <ul className="space-y-2 text-center md:text-left">
               <li>
                 <a href="#" className="hover:underline hover:text-blue-400">
                   Feature
@@ -81,10 +85,10 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">
+            <h3 className="text-lg font-semibold text-white mb-4 text-center md:text-left">
               Quick Links
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-center md:text-left">
               <li>
                 <a href="#" className="hover:underline hover:text-blue-400">
                   iOS
@@ -110,23 +114,23 @@ const Footer = () => {
 
           {/* Download App */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">
+            <h3 className="text-lg font-semibold text-white mb-4 text-center md:text-left">
               Download App
             </h3>
-            <p className="text-sm text-gray-400 mb-4">
+            <p className="text-sm text-gray-400 mb-4 text-center md:text-left">
               Download our Apps and get extra 15% Discount on your first
               Order...!
             </p>
-            <div className="flex space-x-4">
+            <div className="flex justify-center md:justify-start space-x-4">
               <a
                 href="#"
-                className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+                className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 whitespace-nowrap"
               >
                 App Store
               </a>
               <a
                 href="#"
-                className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+                className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 whitespace-nowrap"
               >
                 Google Play
               </a>
@@ -135,11 +139,11 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="mt-8 border-t border-gray-600 pt-4 text-sm flex justify-between">
-          <span className="text-gray-400">
+        <div className="mt-8 border-t border-gray-600 pt-4 text-sm flex flex-col md:flex-row justify-between items-center">
+          <span className="text-gray-400 text-center">
             Copyright © 2022. JobBox all rights reserved
           </span>
-          <div className="flex space-x-4">
+          <div className="flex space-x-4 mt-4 md:mt-0">
             <a href="#" className="hover:underline hover:text-blue-400">
               Privacy Policy
             </a>
