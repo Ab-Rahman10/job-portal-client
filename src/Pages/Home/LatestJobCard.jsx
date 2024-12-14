@@ -1,5 +1,4 @@
 import { FaDollarSign, FaMapMarkerAlt } from "react-icons/fa";
-import { SlActionRedo } from "react-icons/sl";
 import { Link } from "react-router-dom";
 
 const LatestJobCard = ({ job }) => {

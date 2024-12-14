@@ -1,4 +1,12 @@
+import { useNavigate, useParams } from "react-router-dom";
+import useAuth from "../../Hooks/Context";
+import Swal from "sweetalert2";
+
 const JobApply = () => {
+  const { id } = useParams();
+  const { user } = useAuth();
+  const navigate = useNavigate();
+
   const submitJobApplication = (e) => {
     e.preventDefault();
 
@@ -6,7 +14,34 @@ const JobApply = () => {
     const linkedIn = form.linkedIn.value;
     const github = form.github.value;
     const resume = form.resume.value;
-    console.log(linkedIn, github, resume);
+
+    const jobApplication = {
+      job_id: id,
+      applicant: user.email,
+      linkedIn,
+      github,
+      resume,
+    };
+
+    fetch("http://localhost:5000/job_applications", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(jobApplication),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          Swal.fire({
+            icon: "success",
+            title: "Your work has been saved",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          navigate("/myApplication");
+        }
+      });
   };
   return (
     <div className="w-full md:w-8/12 lg:w-5/12 mx-auto">

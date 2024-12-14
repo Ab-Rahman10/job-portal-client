@@ -160,12 +160,6 @@ const Footer = () => {
             <div className="flex justify-center md:justify-start space-x-4">
               <a
                 href="#"
-                className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 whitespace-nowrap"
-              >
-                App Store
-              </a>
-              <a
-                href="#"
                 className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 whitespace-nowrap"
               >
                 Google Play
