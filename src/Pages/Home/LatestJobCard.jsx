@@ -17,7 +17,7 @@ const LatestJobCard = ({ job }) => {
       <div className="card card-compact bg-[#F8FAFF] shadow-xl">
         <div className="flex items-center gap-3 ml-3">
           <figure>
-            <img className="w-16" src={company_logo} alt="Shoes" />
+            <img className="w-16" src={company_logo} />
           </figure>
           <div className="">
             <h4 className="font-semibold text-2xl mb-1.5">{company}</h4>
